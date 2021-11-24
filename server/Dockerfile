@@ -6,3 +6,4 @@ RUN go build -o server .
 EXPOSE 4001
 ENV PORT=4001
 CMD ["/app/server"]
+

@@ -3,6 +3,7 @@ version: "3.9"
 services:
   server:
     container_name: server
+    image: knire257/homework_5_containerize:server
     build: ./server
     environment:
       - IPSTACK_API_KEY=http://api.ipstack.com/190.251.146.218?access_key=4a9355295da7ed5babd11364dbbd328e
@@ -11,6 +12,7 @@ services:
   
   spa:
     container_name: spa
+    image: knire257/homework_5_containerize:spa
     build: ./spa
     ports: 
       - 5000:5001

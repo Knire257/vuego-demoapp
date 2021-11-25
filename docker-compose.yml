@@ -1,0 +1,17 @@
+version: "3.9"
+
+services:
+  server:
+    container_name: server
+    build: ./server
+    ports:
+      - 4001:4001
+  
+  spa:
+    container_name: spa
+    build: ./spa
+    ports: 
+      - 5000:5001
+
+
+  

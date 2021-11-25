@@ -10,6 +10,7 @@ ENV VUE_APP_API_ENDPOINT="http://localhost:4001/api"
 RUN npm run build
 
 FROM nginx:1.21.4-alpine as prod
+ENV VUE_APP_API_ENDPOINT="http://localhost:4001/api"
 COPY --from=build /app/dist /usr/share/nginx/html
 
 EXPOSE 5001
